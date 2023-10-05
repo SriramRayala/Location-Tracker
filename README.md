@@ -24,7 +24,8 @@ Create a new file named store.php in the same directory as locate.html.
 
 In store.php, you can collect the data sent from the JavaScript and store it in a file or database. For example:
 
-![image](https://github.com/SriramRayala/Location-Tracker/assets/78687650/72dab5cf-b55d-4c4b-a107-595b9e19d221)
+![image](https://github.com/SriramRayala/Location-Tracker/assets/78687650/63dc679d-30db-4382-a179-a4fae44c71c9)
+
 
 
 Step 4: Host the Files on 000webhost.com
