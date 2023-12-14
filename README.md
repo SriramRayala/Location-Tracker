@@ -5,6 +5,7 @@ Step 1: Create the HTML File
 
 Open a text editor or code editor on your local machine.
 Create a new HTML file and save it as locate.html.
+
 Step 2: Add the Meme(random pic link) and JavaScript Code
 
 Inside locate.html, add an <iframe> tag to display the meme:
